@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模仿360</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+	  <div class="fullpage" id="fullpage">
+		<!--第一屏-->
+		<section class="section">
+			<!--logo-->
+			<div class="logo"></div>
+			<!--文字-->
+			<div class="text">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--特征-->
+			<div class="feature"></div>
+		</section>
+		<!--第二屏-->
+		<section class="section">
+			<!--盾牌-->
+			<div class="shield">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!--介绍-->
+			<div class="intro"></div>
+		</section>
+		<section class="section">
+			<div class="intro"></div>
+			<div class="circle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="rocket"></div>
+		</section>
+		<section class="section">
+			<div class="search">
+			    <span class="key"></span>
+			    <div class="wrap">
+			    	<div class="tips"></div>
+			    </div>
+			</div>
+			<div class="intro"></div>
+		</section>
+		<section class="section">
+		    <div class="intro"></div>
+		    <div class="browser">
+		    	<!--背影-->
+		    	<div class="bg"></div>
+		    	<!--工具栏-->
+		    	<div class="swrap">
+		    	    <span></span>
+		    	</div>
+		    	<!--边框线-->
+		    	<div class="line"></div>
+		    	<div class="leftside border"></div>
+		    	<div class="topside border"></div>
+		    	<div class="rightside border"></div>
+		    	<div class="bottomside border"></div>
+		    </div>
+		</section>
+	  </div>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js" ></script>
+		<script>
+			$("#fullpage").fullpage({
+				css3:true,
+				afterLoad:function(anchorLink,index){
+					$(".section").removeClass("current");
+					setTimeout(function(){
+						$(".section").eq(index - 1).addClass("current");
+					},100);
+				}
+			});
+			
+		</script>
+	</body>
+</html>
